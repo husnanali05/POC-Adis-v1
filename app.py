@@ -1,12 +1,16 @@
 import streamlit as st
 import torch
 import numpy as np
-import cv2
+
 from PIL import Image
 import matplotlib.pyplot as plt
 from ultralytics import YOLO
 import tempfile
 import os
+
+os.system("pip install opencv-python-headless")
+
+import cv2
 
 def load_model(model_path):
     try:
