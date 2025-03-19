@@ -8,10 +8,15 @@ from ultralytics import YOLO
 import tempfile
 import os
 
-os.system("pip install opencv-python-headless")
+os.system("apt-get update && apt-get install -y libgl1 libglib2.0-0")
 
-import cv2
+import asyncio
 
+try:
+    asyncio.get_running_loop()
+except RuntimeError:
+    asyncio.run(asyncio.sleep(0))  # Ensures Streamlit doesn't break
+    
 def load_model(model_path):
     try:
         model = YOLO(model_path)
