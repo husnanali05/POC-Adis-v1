@@ -1,7 +1,7 @@
 torch==2.2.0
 torchvision==0.17.0
 torchaudio==2.2.0
-numpy==1.23.5
+numpy>=1.26  # Use a NumPy version compatible with Python 3.12
 opencv-python-headless==4.8.1.78
 ultralytics==8.0.50
 streamlit==1.25.0
