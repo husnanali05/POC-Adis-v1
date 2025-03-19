@@ -53,7 +53,7 @@ def main():
 
     st.write("Upload an image of leather material to detect defects and estimate their area.")
 
-    model_path = "best.pt"
+    model_path = "your_trained_model.pt"
     model = load_model(model_path)
 
     if model is not None:
